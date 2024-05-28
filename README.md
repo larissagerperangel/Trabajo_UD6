@@ -65,6 +65,7 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 ### 2.2 Listado de dispositivos
 
 - Switch (TP-Link TL-SG3452XP)
+
 ![Captura13](./Fotos_2_2/switch.webp)
 
 - Bobina de cable de par trenzado (Bobina 100m Cable Red Rígido UTP Cat. 6 10/100/1000)
