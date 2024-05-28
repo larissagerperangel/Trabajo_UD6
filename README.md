@@ -86,6 +86,9 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 | Total S/IVA  | 613,03€   | 22,03€   | 26,78€   | 16,58€    |
 | Total C/IVA  | 775,99€   | 27,89€   | 33,99€   | 20,99€    |
 
+- El presupuesto total con IVA nos sala 858,86€. 
+- El presupuesto sin IVA nuestro saldría 678,42€.
+
 ## 3. Bibliografía:
 
 - https://www.pccomponentes.com/tp-link-tl-sg3452xp-switch-administrado-48-puertos-gigabit-poe-10-100-1000-4-puertos-sfp
