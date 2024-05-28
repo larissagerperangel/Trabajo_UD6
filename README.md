@@ -38,36 +38,38 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 ### 1.2 Investiga y aporta un esquema que ejemplifique su funcionamiento:
 
 ● NAT
-![Captura8]()
+![Captura8](./Fotos_1_2/Captura8.png)
 
 ● Adaptador puente
-![Captura9]()
+![Captura9](./Fotos_1_2/Captura9.png)
 
 ● Red interna
-![Captura10]()
+![Captura10](./Fotos_1_2/Captura10.png)
 
 ● Red NAT
-![Captura11]()
+![Captura11](./Fotos_1_2/Captura11.png)
 
 
 ## 2. Diseño de una red LAN:  
 
 ### 2.1 Mapa lógico de red
-![Captura12]()
+
+- A continuación muestro un mapa lógico de red, en el que interconecto 30 PCs de escritorio y 10 dispositivos inalámbricos en una pequeña oficina de una PYME, de 7,1m*7,1m. La oficina ocupa una superficie completamente diáfana de 50 m^2, por lo que solo incorporará el router instalado por el proveedor. Esta oficina también está equipada con 15 mesas con capacidad para 2 puestos de trabajo cada una. Dada esta información decidimos separar el primer PC de cada puesto 1m de la toma de red de la pared y el segundo PC 1,5m de la misma. Además de esto, la oficina dispone de cableado de red categoría 6 canalizado a través de las paredes, con 30 tomas de red ethernet distribuidas a través de las canalizaciones. En el mapa lógico además de mostrar lo anteriormente mencionado, también especifica la dirección IP de cada ordenador y su máscara de subred, para concluir nuestro mapa decidimos hacer todas las acotaciones necesarias para saber la cantidad de cable de par trenzado que íbamos a necesitar, mi conclusión fueron unos 60m de cable para poder cubrir toda la clase y para que todo quede bien conectado. También decidí comprar a parte las clavijas de RJ45, porque salía más barato que comprar ya todo junto y preparado, como este proceso lo voy a realizar yo, tuve que comprar por tanto un crimpador.
+![Captura12](./Fotos_2_1/CLASE.png)
 
 ### 2.2 Listado de dispositivos
 
 - Switch (TP-Link TL-SG3452XP)
-![Captura13]()
+![Captura13](./Fotos_2_2/switch.webp)
 
 - Bobina de cable de par trenzado (Bobina 100m Cable Red Rígido UTP Cat. 6 10/100/1000)
-![Captura14]()
+![Captura14](./Fotos_2_2/bobina.webp)
 
 - Clavijas RJ45 (Equip Conector RJ45 Cat6 100 Unidades)
-![Captura15]()
+![Captura15](./Fotos_2_2/Clavija.webp)
 
 - Crimpador (6COMGIGA)
-![Captura16]()
+![Captura16](./Fotos_2_2/crimpador.jpg)
 
 ### 2.3 Presupuesto
 
