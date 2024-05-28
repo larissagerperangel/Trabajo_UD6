@@ -21,19 +21,19 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 ### 1.1 Establecer una red de área local (LAN) en la que se conecten dos máquinas virtuales:   
 
 - En ambas máquinas buscamos su tipo de red desde el panel de configuración de red de virtual vox (en ambas es LAN) y lo cambiamos a red interna.
-![Captura1]()
-![Captura2]()
+![Captura1](./Fotos_1_1/Captura1.png)
+![Captura2](./Fotos_1_1/Captura2.png)
 
 - Desde la terminal de linux de la primera máquina le configuramos una ip estática mediante un archivo “netplan”. Tendremos que crearlo, insertar la instrucción para crear la ip estática y ejecutarlo.
-![Captura3]()
-![Captura4]()
-![Captura5]()
+![Captura3](./Fotos_1_1/Captura3.png)
+![Captura4](./Fotos_1_1/Captura4.png)
+![Captura5](./Fotos_1_1/Captura5.png)
 
 - Hacemos lo mismo en la segunda máquina virtual pero dándole otra ip distinta
-![Captura6]()
+![Captura6](./Fotos_1_1/Captura6.png)
 
 - Para comprobar que están en la misma red LAN podemos hacer varias cosas como pedir información de una máquina desde la otra, en este caso pediremos el ping de la segunda máquina desde la primera.
-![Captura7]()
+![Captura7](./Fotos_1_1/Captura7.png)
 
 ### 1.2 Investiga y aporta un esquema que ejemplifique su funcionamiento:
 
