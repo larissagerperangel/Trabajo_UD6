@@ -6,8 +6,9 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
   
 ### ÍNDICE:
 1. Creación de una red LAN utilizando máquinas virtuales:
-1.1 Establecer una red de área local (LAN) en la que se conecten dos máquinas virtuales:   
-1.2 Investiga y aporta un esquema que ejemplifique su funcionamiento:   
+1.1 Investiga y aporta un esquema que ejemplifique su funcionamiento:   
+1.2 Establecer una red de área local (LAN) en la que se conecten dos máquinas virtuales:   
+1.3 Conclusión:
 2. Establecimiento de permisos locales en Windows 11 Pro  
 2.1 Mapa lógico de red 
 2.2 Listado de dispositivos  
@@ -18,7 +19,21 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 
 ## 1. Creación de una red LAN utilizando máquinas virtuales:  
 
-### 1.1 Establecer una red de área local (LAN) en la que se conecten dos máquinas virtuales:   
+### 1.1 Investiga y aporta un esquema que ejemplifique su funcionamiento:   
+
+● NAT: Una red de ordenadores con ip privada se conectan a internet mediante una ip IPv4 pública otorgada por el router. El objetivo de este método es “ahorrar” ips al conectar varios dispositivos a internet mediante la misma ip pública.
+![Captura8](./Fotos_1_2/Captura9.png)
+
+● Adaptador puente: Es una funcionalidad que nos ofrecen las máquinas virtuales, con ello podemos conectar una máquina virtual a la misma red que la máquina anfitrión.
+![Captura9](./Fotos_1_2/Captura10.png)
+
+● Red interna: Con esta configuración podemos hacer que varias máquinas virtuales se conecten entre ellas a pesar de que será una red aislada y no tendrá conexión a internet, solo habrá comunicación entre las máquinas virtuales
+![Captura10](./Fotos_1_2/Captura11.png)
+
+● Red NAT: Se podría decir que es la mezcla de una red interna y una NAT. Funciona igual que una NAT solo que también acepta varias máquinas virtuales gracias a que el router no solo entiende de direcciones ip, si no que también de números de puertos a la dirección ip. Permite que múltiples conexiones de diferentes dispositivos sean manejadas simultáneamente utilizando la misma IP pública.
+![Captura11](./Fotos_1_2/Captura12.png)
+
+### 1.2 Establecer una red de área local (LAN) en la que se conecten dos máquinas virtuales:
 
 - En ambas máquinas buscamos su tipo de red desde el panel de configuración de red de virtual vox (en ambas es LAN) y lo cambiamos a red interna.
 ![Captura1](./Fotos_1_1/Captura1.png)
@@ -35,19 +50,9 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 - Para comprobar que están en la misma red LAN podemos hacer varias cosas como pedir información de una máquina desde la otra, en este caso pediremos el ping de la segunda máquina desde la primera.
 ![Captura7](./Fotos_1_1/Captura7.png)
 
-### 1.2 Investiga y aporta un esquema que ejemplifique su funcionamiento:
+### 1.3 Conclusión:
 
-● NAT
-![Captura8](./Fotos_1_2/Captura8.png)
-
-● Adaptador puente
-![Captura9](./Fotos_1_2/Captura9.png)
-
-● Red interna
-![Captura10](./Fotos_1_2/Captura10.png)
-
-● Red NAT
-![Captura11](./Fotos_1_2/Captura11.png)
+- Estas dos máquinas pueden comunicarse porque están en la misma red interna. El hipervisor, en esta caso Virtual Vox simula un switch de red para interconectar las máquinas, el tema es que este “switch” necesita unas ip privadas en un rango concreto y las máquinas de primeras no lo tienen, es por eso que le insertamos una nueva ip estática a cada una que entra dentro de ese rango (192.168.x.x). Como resultado tenemos que las máquinas virtuales comparten un trozo de red aislado, lo que les imposibilita acceder a redes externas en primera instancia.
 
 
 ## 2. Diseño de una red LAN:  
@@ -90,3 +95,12 @@ _Larissa Gerpe Rangel y Santiago Marticó Bello_
 
 - https://www.amazon.es/6COMGIGA-Herramienta-crimpado-crimpadora-6C-CT-02/dp/B0C7VP8WMV/ref=sr_1_3_sspa?dib=eyJ2IjoiMSJ9.fo5sUoZXxncbdWC6fySPWlsLu6KdqO8ToFKGbwrY6S5m59jEO4gZxBy4bloIMwlK3PHOqXnruJQu31sKWlREGGNjM5v8u8RifINNQAu5ElHwfEhX_QUgRrCK7kn6i9-mHtpj6T6FPnXUt2BpJZTw4Fwi1n4AvlNOnF0NP6Fpk5za3NrhOl4DfloNuTW_wHn-asvXr9fUrhAsHthFpBXQPl4a67j5VRYaXMw7xlhEPz9qevc_QttVX9muCePiJMDMLo78WuvRrXbOfwpUhebPBkW4AZ4Igf7Nb3pnplLaUBU.wwiXsIcSNxcpxLaqICz4ARIZ-ge9817gHEzkw7rHdtQ&dib_tag=se&keywords=crimpadora%2Brj45&qid=1716798608&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1
 
+- https://www.xatakamovil.com/conectividad/nat-network-address-translation-que-es-y-como-funciona
+
+- https://www.fpgenred.es/VirtualBox/modo_adaptador_puente.html
+
+- https://www.fpgenred.es/VirtualBox/modo_red_interna.html
+
+- https://danitic.wordpress.com/2018/10/24/diferencias-entre-nat-red-nat-adaptador-puente-internal-y-solo-anfitrion-en-virtualbox/
+
+- https://learn.microsoft.com/es-es/virtualization/hyper-v-on-windows/user-guide/setup-nat-network 
